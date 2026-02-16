@@ -1,0 +1,140 @@
+﻿ @model IEnumerable<MVC_Music.ViewModels.PerformanceReportVM>
+
+@{
+	ViewData["Title"] = "PerformanceSummary";
+}
+<h2>Performance Summary</h2>
+<form asp-controller="Song" asp-action="PerformanceSummary" method="get">
+	
+	<div class="container-fluid d-block d-lg-none">
+		<a asp-action="PerformanceReportExport" class="btn btn-info ">Export to Excel</a>
+
+		<div class="table-responsive">
+			<table class="table text-nowrap table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>
+							@Html.DisplayNameFor(model => model.FormalName)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Average_Fee_Paid)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Highest_Amount_Paid)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Lowest_Fee_Paid)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Total_Number_of_Performances)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Total_Number_of_Songs_Preformed)
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>
+								@Html.DisplayFor(modelItem => item.FormalName)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Average_Fee_Paid)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Highest_Amount_Paid)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Lowest_Fee_Paid)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Total_Number_of_Performances)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Total_Number_of_Songs_Preformed)
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+
+
+	</div>
+
+	<div class="d-none d-lg-block">
+		<a asp-action="PerformanceReportExport" class="btn btn-info float-end">Export to Excel</a>
+
+		<div class="table-responsive">
+			<table class="table text-nowrap table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>
+							@Html.DisplayNameFor(model => model.FormalName)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Average_Fee_Paid)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Highest_Amount_Paid)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Lowest_Fee_Paid)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Total_Number_of_Performances)
+						</th>
+						<th>
+							@Html.DisplayNameFor(model => model.Total_Number_of_Songs_Preformed)
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>
+								@Html.DisplayFor(modelItem => item.FormalName)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Average_Fee_Paid)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Highest_Amount_Paid)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Lowest_Fee_Paid)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Total_Number_of_Performances)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Total_Number_of_Songs_Preformed)
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+
+
+	</div>
+
+
+
+
+	<partial name="_PagingNavBar" />
+</form>
+@section Scripts {
+	<script type="text/javascript">
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>
+}
+

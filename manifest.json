@@ -1,0 +1,48 @@
+{
+  "name": "Music Collection",
+  "short_name": "Music Col",
+  "description": "Collection based music app. Store different musicians with their discography alongside intruments and genres",
+  "icons": [
+    {
+      "src": "/images/logo_192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/logo_512.png",
+      "sizes": "512x512"
+    }
+  ],
+  //"screenshots": [
+  //  {
+  //    "src": "/images/screenshot1.jpg",
+  //    "sizes": "1000x500",
+  //    "type": "image/jpeg",
+  //    "form_factor": "wide",
+  //    "label": "Create Patient"
+  //  },
+  //  {
+  //    "src": "/images/screenshot2.jpg",
+  //    "sizes": "1000x500",
+  //    "type": "image/jpeg",
+  //    "form_factor": "wide",
+  //    "label": "Data Maintenance"
+  //  },
+  //  {
+  //    "src": "/images/screenshot1n.jpg",
+  //    "sizes": "640x320",
+  //    "type": "image/jpeg",
+  //    "form_factor": "narrow",
+  //    "label": "Create Patient"
+  //  },
+  //  {
+  //    "src": "/images/screenshot2n.jpg",
+  //    "sizes": "640x320",
+  //    "type": "image/jpeg",
+  //    "form_factor": "narrow",
+  //    "label": "Data Maintenance"
+  //  }
+  //],
+  "display": "standalone",
+  "start_url": "/",
+  "id": "/"
+}
